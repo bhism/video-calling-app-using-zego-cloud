@@ -49,6 +49,18 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Icon(
+                Icons.video_call,
+                size: 100,
+                color: Colors.blue[900],
+              ),
+              Text(
+                "Video call with Zego Cloud",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue[900],
+                ),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -57,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                     child: TextFormField(
                       controller: conferenceDTextCtrl1,
                       decoration:
-                          const InputDecoration(labelText: "enter name"),
+                          const InputDecoration(labelText: "Enter Name"),
                     ),
                   ),
                 ],
@@ -70,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                     child: TextFormField(
                       controller: conferenceDTextCtrl,
                       decoration: const InputDecoration(
-                          labelText: "join a conference by id"),
+                          labelText: "Join a conference by id"),
                     ),
                   ),
                   ElevatedButton(
@@ -107,8 +119,9 @@ class VideoConferencePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: ZegoUIKitPrebuiltVideoConference(
-        appID: enter app ID,
-        appSign: "enter you app sign",
+        appID: enter here,
+        appSign:
+            "enter here",
         userID: localUserID,
         userName: conferenceDTextCtrl1.text,
         conferenceID: conferenceID,
